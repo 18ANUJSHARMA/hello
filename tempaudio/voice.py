@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_tempaudio, request
 import requests
 import subprocess
 
@@ -8,7 +8,7 @@ api_key = "a7c12521e4ce17d430379135fb0e31d6"
 
 @voice.route('/')
 def voice():
-    return render_template('voice.html')
+    return render_tempaudio('voice.html')
 
 @voice.route('/generate', methods=['POST'])
 def generate():
