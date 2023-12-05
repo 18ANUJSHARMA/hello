@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character AI Conversation</title>
+</head>
+<body>
+    <h1>Character AI Conversation</h1>
+    <form action="/conversation" method="post">
+        <label for="speech">User Speech:</label>
+        <input type="text" id="speech" name="speech" required>
+        <button type="submit">Get Response</button>
+    </form>
+    <p>Selected Character: {{ selected_character }}</p>
+    {% if speech %}
+        <p>User Speech: {{ speech }}</p>
+    {% endif %}
+    {% if response %}
+        <p>AI Response: {{ response }}</p>
+    {% endif %}
+</body>
+</html>
